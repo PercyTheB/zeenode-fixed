@@ -1,2 +1,2 @@
-# zeenode-fixed-embed-patch
-zeenode selfbot but I fixed it for the new embed patch (by the way, I didn't bother fixing crypto/currency commands because lazy)
+# zeenode-fixed
+name isn't fully accurate, added and changed a few things. Although most of the codebase is still zeenode. Don't accuse me of skidding

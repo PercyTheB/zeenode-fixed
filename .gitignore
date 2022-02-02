@@ -1,6 +1,5 @@
 #Ignore config.json
-config.json
-.json
+./zeenode-selfbot/zeenode/config.py
 #Ignore pycache
 ./cogs/__pycache__/
 __pycache__

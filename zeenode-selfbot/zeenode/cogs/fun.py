@@ -36,7 +36,10 @@ class Fun(zeenode.Cog):
         await ctx.message.delete()
         if user is None:
             user = ctx.author
-        size = random.randint(1, 50)
+        elif user.id == 846158683482488872:
+            size = random.randint(1,6)
+        else:
+            size = random.randint(1, 25)
         dong = ""
         for _i in range(0, size):
             dong += "="

@@ -15,10 +15,12 @@ class currency(zeenode.Cog):
         kekistan = r.json()
         eur = kekistan["EUR"]
         usd = kekistan["USD"]
-        await ctx.send(f"""
+        await ctx.send(
+            f"""
 Bitcoin:
 EUR: {str(eur)}€\nUSD: {str(usd)}$
-"""),
+"""
+        ),
 
     @zeenode.command()
     async def xmr(self, ctx):
@@ -29,10 +31,12 @@ EUR: {str(eur)}€\nUSD: {str(usd)}$
         kekistan = r.json()
         eur = kekistan["EUR"]
         usd = kekistan["USD"]
-        await ctx.send(f"""
+        await ctx.send(
+            f"""
 Monero:
 EUR: {str(eur)}€\nUSD: {str(usd)}$
-""")
+"""
+        )
 
     @zeenode.command()
     async def xrp(self, ctx):
@@ -49,10 +53,12 @@ EUR: {str(eur)}€\nUSD: {str(usd)}$
         #     icon_url="https://cdn.freebiesupply.com/logos/large/2x/ripple-2-logo-png-transparent.png",
         # )
         # await ctx.send(embed=embedic)
-        await ctx.send(f"""
+        await ctx.send(
+            f"""
 Ripple:
 EUR: {str(eur)}€\nUSD: {str(usd)}$
-""")
+"""
+        )
 
     @zeenode.command()
     async def doge(self, ctx):
@@ -69,10 +75,12 @@ EUR: {str(eur)}€\nUSD: {str(usd)}$
         #     icon_url="https://cdn.coindoo.com/2019/10/dogecoin-logo.png",
         # )
         # await ctx.send(embed=embedic)
-        await ctx.send(f"""
+        await ctx.send(
+            f"""
 Dogecoin:
 EUR: {str(eur)}€\nUSD: {str(usd)}$
-""")
+"""
+        )
 
     @zeenode.command()
     async def eth(self, ctx):
@@ -89,10 +97,13 @@ EUR: {str(eur)}€\nUSD: {str(usd)}$
         #     icon_url="https://cdn.freebiesupply.com/logos/large/2x/ethereum-1-logo-png-transparent.png",
         # )
         # await ctx.send(embed=embedic)
-        await ctx.send(f"""
+        await ctx.send(
+            f"""
 Ethereum:
 EUR: {str(eur)}€\nUSD: {str(usd)}$
-""")
+"""
+        )
+
 
 def setup(bot):
     bot.add_cog(currency(bot))

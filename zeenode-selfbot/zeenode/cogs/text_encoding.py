@@ -35,7 +35,7 @@ class encode(zeenode.Cog):
         msg = hashlib.md5(args.decode())
         crnja = msg.hexdigest()
         await ctx.send(crnja)
- 
+
     @zeenode.command()
     async def encode_sha1(self, ctx, *, args):
         await ctx.message.delete()

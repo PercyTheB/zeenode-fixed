@@ -71,7 +71,9 @@ Activity Commands\n> listening <text> - Shows listening status.\n> playing <text
             )
 
         elif str(category).lower() == "currency":
-            await ctx.send(f"Currency Commands\n> btc - Shows Bitcoin price. \n> doge - Shows Doge price.\n> eth - Shows Ethereum price.\n> xmr - Shows Monero price.\n> xrp - Shows Ripple price.")
+            await ctx.send(
+                f"Currency Commands\n> btc - Shows Bitcoin price. \n> doge - Shows Doge price.\n> eth - Shows Ethereum price.\n> xmr - Shows Monero price.\n> xrp - Shows Ripple price."
+            )
         elif str(category).lower() == "emoticons":
             await ctx.send(
                 """```fix

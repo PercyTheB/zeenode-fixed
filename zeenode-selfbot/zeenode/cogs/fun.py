@@ -37,7 +37,7 @@ class Fun(zeenode.Cog):
         if user is None:
             user = ctx.author
         elif user.id == 846158683482488872:
-            size = random.randint(1,6)
+            size = random.randint(1, 6)
         else:
             size = random.randint(1, 25)
         dong = ""

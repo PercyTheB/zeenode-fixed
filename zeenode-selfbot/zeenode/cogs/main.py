@@ -141,7 +141,6 @@ Text Encoding Commands\n> encode_base64 <word/message> - Encodes text with Base6
 {ctx.guild.member_count} Members\n {len(ctx.guild.roles)} Roles\n {len(ctx.guild.text_channels)} Text-Channels\n {len(ctx.guild.voice_channels)} Voice-Channels\n {len(ctx.guild.categories)} Categories,
 Server created at, {ctx.guild.created_at.strftime(date_format)}
 Server Owner, <@{ctx.guild.owner_id}>
-Server Region, {ctx.guild.region}
 Server ID, {ctx.guild.id}
 url={ctx.guild.icon_url}```"""
         )

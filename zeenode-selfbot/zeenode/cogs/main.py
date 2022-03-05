@@ -169,17 +169,6 @@ url={ctx.guild.icon_url}```"""
             )
         )
 
-    @zeenode.command()
-    async def purge(self, ctx, amount: int):
-        await ctx.message.delete()
-        async for message in ctx.message.channel.history(limit=amount).filter(
-            lambda m: m.author == self.bot.user
-        ).map(lambda m: m):
-            try:
-                await message.delete()
-            except:
-                pass
-
 
 def setup(bot):
     bot.add_cog(Main(bot))

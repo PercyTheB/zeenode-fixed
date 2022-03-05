@@ -31,6 +31,17 @@ class mass(zeenode.Cog):
                 pass
         print(f"Finished editing all messages to {edit_to}")
 
+    @zeenode.command()
+    async def purge(self, ctx, amount: int):
+        await ctx.message.delete()
+        async for message in ctx.message.channel.history(limit=amount).filter(
+            lambda m: m.author == self.bot.user
+        ).map(lambda m: m):
+            try:
+                await message.delete()
+            except:
+                print(f"Purge failed")
+
 
 def setup(bot):
     bot.add_cog(mass(bot))

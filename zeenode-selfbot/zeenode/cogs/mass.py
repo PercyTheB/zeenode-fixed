@@ -35,15 +35,13 @@ class mass(zeenode.Cog):
     async def purge(self, ctx, amount: int):
         await ctx.message.delete()
         counter = 0
-        async for message in ctx.message.channel.history(limit=amount+1).filter(
+        async for message in ctx.message.channel.history(limit=amount + 1).filter(
             lambda m: m.author == self.bot.user
         ).map(lambda m: m):
-            try:
-                await message.delete()
-                counter+=1
-                print(f"{counter} messages deleted")
-            except:
-                print(f"Purge failed")
+            await message.delete()
+            counter += 1
+            print(f"{counter} messages deleted")
+
 
 def setup(bot):
     bot.add_cog(mass(bot))

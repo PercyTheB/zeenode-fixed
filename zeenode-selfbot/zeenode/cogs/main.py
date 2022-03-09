@@ -3,6 +3,7 @@ import io
 from discord.ext import commands as zeenode
 from zeenode.load import token
 from zeenode.config import prefix
+import time
 
 bot = zeenode.Bot(command_prefix=prefix, self_bot=True)
 bot.remove_command("help")
@@ -145,6 +146,17 @@ Server created at, {ctx.guild.created_at.strftime(date_format)}
 Server Owner, <@{ctx.guild.owner_id}>
 Server ID, {ctx.guild.id}
 url={ctx.guild.icon_url}```"""
+        )
+
+    @zeenode.command()
+    async def ping(self, ctx):
+        await ctx.message.delete()
+        start_time = time.time()
+        message = await ctx.send("Testing Ping...")
+        end_time = time.time()
+
+        await message.edit(
+            content=f"Pong! {round(self.bot.latency * 1000)}ms\nAPI: {round((end_time - start_time) * 1000)}ms"
         )
 
     @zeenode.command()

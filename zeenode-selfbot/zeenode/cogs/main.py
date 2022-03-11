@@ -156,7 +156,7 @@ url={ctx.guild.icon_url}```"""
         end_time = time.time()
 
         await message.edit(
-            content=f"Pong! {round(self.bot.latency * 1000)}ms\nAPI: {round((end_time - start_time) * 1000)}ms"
+            content=f"```Pong! {round(self.bot.latency * 1000)}ms\nAPI: {round((end_time - start_time) * 1000)}ms```"
         )
 
     @zeenode.command()

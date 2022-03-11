@@ -1,6 +1,6 @@
 import discord, pyfiglet
 from discord.ext import commands as zeenode
-
+deleted_messages = 0
 
 class mass(zeenode.Cog):
     def __init__(self, bot):
@@ -31,16 +31,16 @@ class mass(zeenode.Cog):
                 pass
         print(f"Finished editing all messages to {edit_to}")
 
-    @zeenode.command()
+    @zeenode.command(aliases=["clear"])
     async def purge(self, ctx, amount: int):
         await ctx.message.delete()
-        counter = 0
-        async for message in ctx.message.channel.history(limit=amount + 1).filter(
-            lambda m: m.author == self.bot.user
-        ).map(lambda m: m):
-            await message.delete()
-            counter += 1
-            print(f"{counter} messages deleted")
+        async for message in ctx.message.channel.history(limit=amount).filter(lambda m: m.author == self.bot.user).map(lambda m: m):
+            try:
+                await message.delete()
+                deleted_messages += 1
+                print(f"Deleted {deleted_messages} messages")
+            except:
+                pass
 
 
 def setup(bot):

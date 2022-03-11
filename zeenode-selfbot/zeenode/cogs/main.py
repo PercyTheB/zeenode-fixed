@@ -92,7 +92,7 @@ Fun Commands\n> cat - Sends a random cat image.\n> dog - Sends a random dog imag
         elif str(category).lower() == "main":
             await ctx.send(
                 """```fix
-Main Commands\n> ascii <message> - Sends message as ascii art. \n> av <@user> - Sends your avatar in the chat.\n> guildicon - Shows server (guild) icon.\n> serverinfo - Shows server info.\n> whois <@user> - Sends info about user.\n> hypesquad <house> - Allows you to change your hypesquad house/badge.\n> purge <number of messages> - Deletes messages.\n> suggest <question> - Sends question with embed leaving thumbsup & thumbsdown react.
+Main Commands\n> ascii <message> - Sends message as ascii art. \n> av <@user> - Sends your avatar in the chat.\n> guildicon - Shows server (guild) icon.\n> serverinfo - Shows server info.\n> whois <@user> - Sends info about user.\n> hypesquad <house> - Allows you to change your hypesquad house/badge.\n> purge <number of messages> - Deletes messages.\n> suggest <question> - Sends question with embed leaving thumbsup & thumbsdown react.\n> ping - Checks the message delay and API delay
 ```"""
             )
         elif str(category).lower() == "mass":
